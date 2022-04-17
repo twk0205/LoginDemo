@@ -96,6 +96,7 @@ public class UserController {
 			result.addObject("userAccount", userInfo.getAccount());
 			result.addObject("userName", userInfo.getName());
 			result.addObject("userPassword", userInfo.getPassword());
+			//test123
 		} else {
 			result = new ModelAndView("login");
 		}
