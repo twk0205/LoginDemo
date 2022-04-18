@@ -5,6 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/js/easyui-lang-zh_TW.js"></script>
+	<link href="/css/easyui.css" rel="stylesheet" type="text/css">
+	<link href="/css/icon.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -17,27 +21,27 @@
 					<tr>
 						<td>Account : </td>
 						<td>
-							<!-- <input type="text" id="account" name="account" size="20" maxlength="20" value="${userAccount}"/> -->
-							<label>${userAccount}</label>
+							<input type="text" id="account" name="account" size="20" maxlength="20" class="easyui-textbox" disabled="disabled" value="${userAccount}"/>
+							<!-- <label>${userAccount}</label> -->
 						</td>
 					</tr>
 					<tr>
 						<td>Name : </td>
 						<td>
-							<input type="text" id="name" name="name" size="20" maxlength="20" value="${userName}"/>
+							<input type="text" id="name" name="name" size="20" maxlength="20" class="easyui-textbox" value="${userName}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Password : </td>
 						<td>
-							<input type="text" id="password" name="password" size="20" value="${userPassword}"/>
+							<input type="text" id="password" name="password" size="20" class="easyui-textbox" value="${userPassword}"/>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
 						<td >
-							<button type="button" id="update_btn">Update</button>
-							<button type="button" id="cancel_btn">Cancel</button>
+							<a id="update_btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">Save</a>
+							<a id="cancel_btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">Cancel</a>
 						</td>
 					</tr>
 				</tbody>

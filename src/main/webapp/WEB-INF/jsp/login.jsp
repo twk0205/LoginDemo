@@ -5,6 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/js/easyui-lang-zh_TW.js"></script>
+	<link href="/css/easyui.css" rel="stylesheet" type="text/css">
+	<link href="/css/icon.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,20 +23,20 @@
 					<tr>
 						<td>Account : </td>
 						<td>
-							<input type="text" id="account" name="account" size="20" maxlength="20" value="${account}"/>
+							<input type="text" id="account" name="account" size="20" maxlength="20" class="easyui-textbox" value="${account}"/>
 						</td>
 					</tr>
 					<tr>
 						<td>Password : </td>
 						<td>
-							<input type="text" id="password" name="password" size="20" maxlength="20"/>
+							<input type="text" id="password" name="password" size="20" maxlength="20" class="easyui-textbox"/>
 						</td>
 					</tr>
 					<tr>
 						<td></td>
 						<td >
-							<button type="button" id="login_btn">Login</button>
-							<button type="button" id="register_btn">Register</button>
+							<a href="#" id="login_btn" class="easyui-linkbutton">Login</a>
+							<a href="#" id="register_btn" class="easyui-linkbutton">Register</a>
 						</td>
 					</tr>
 				</tbody>
@@ -45,6 +49,10 @@
 $(document).ready(function() {
 
   checkMsg();
+  
+  $('#password').passwordbox({
+      showEye: true
+  });
 
   //do login
   $("#login_btn").click(function(){
